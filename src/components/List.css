@@ -1,0 +1,144 @@
+
+.inputTask{
+    padding:20px 20px 20px 20px;
+    background-color:hsl(235, 24%, 19%);
+    border-radius: 5px;
+    border: none;
+    color: hsl(230, 23%, 79%);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+input[type="checkbox"]{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    -webkit-appearance: none;
+    border: 1px solid hsl(236, 9%, 61%);
+    outline:none;
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+input:checked[type="checkbox"]{
+    transition: 0.5s;
+    background-image: -webkit-linear-gradient(left, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    border: none;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked + label {
+    text-decoration-line: line-through;
+    color:hsl(236, 9%, 61%);
+  } 
+
+  input[type="checkbox"]:checked:after {
+    /* Heres your symbol replacement - this is a tick in Unicode. */
+    content: "\2713";
+    color: #fff;
+    /* The following positions my tick in the center, 
+     * but you could just overlay the entire box
+     * with a full after element with a background if you want to */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+
+.list{
+    margin: 20px 70% 0% 30%;
+    width: 90%;
+    text-align: left;
+    background-color:hsl(235, 24%, 19%);
+    border: 2px ;
+    border-radius: 5px;
+    color: hsl(230, 23%, 79%);
+    font-size: 20px;
+    font-weight: 200;
+    position: relative;
+    right: 130px;
+}
+
+.main{
+    border-bottom: 1px solid rgb(122, 118, 118);
+    width: 100%;
+    display: inline-flex;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.main p{
+    text-align: right;
+    margin-right: 10px;
+    cursor: pointer;
+    color:hsl(236, 9%, 61%);
+}
+
+.main p:hover{
+    color:tomato;
+}
+
+.single_task{
+    margin-top: 8px;
+    overflow: hidden;
+    padding: 20px;
+    width: 100%;
+}
+
+.form_content{
+    width: 100%;
+    margin-left: 67px;
+}
+
+.btn {
+    background: hsl(220, 98%, 61%);
+    margin-left: 20px;
+    background-image: -webkit-linear-gradient(left, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    border: none;
+    border-radius: 8px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #faf7fa;
+    font-size: 20px;
+    padding: 20px 20px 20px 20px;
+  }
+  
+  .btn:hover {
+    background: hsl(220, 98%, 61%);
+    background-image: -webkit-linear-gradient(right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  }
+
+  .disBtn{
+    background: gray;
+    margin-left: 20px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #faf7fa;
+    font-size: 20px;
+    padding: 20px 20px 20px 20px;
+  }
+  
+  .disBtn:hover{
+      cursor:not-allowed;
+  }
+  
+  @media(max-width:375px){
+      .form_content{
+          display: inline-flex;
+          align-content: center;
+          margin-right: 50px;
+      }
+      .inputTask{
+       width:80%;
+      }
+
+      .list{
+          position: relative;
+          right: 80px;
+          width:100%;
+      }
+  }
